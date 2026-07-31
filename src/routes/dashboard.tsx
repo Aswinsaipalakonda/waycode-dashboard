@@ -33,7 +33,7 @@ function stamp() {
 }
 
 function Dashboard() {
-  const [activeId, setActiveId] = useState(repos[0].id);
+  const [activeId, setActiveId] = useState(repos[0]!.id);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [desktopCollapsed, setDesktopCollapsed] = useState(false);
   const [lines, setLines] = useState<TelemetryEntry[]>([]);
@@ -42,7 +42,7 @@ function Dashboard() {
   const [status, setStatus] = useState<"pending" | "approved" | "rejected">("pending");
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
-  const repo = repos.find((r) => r.id === activeId) ?? repos[0];
+  const repo = repos.find((r) => r.id === activeId) ?? repos[0]!;
 
   const clearTimers = useCallback(() => {
     timers.current.forEach(clearTimeout);
