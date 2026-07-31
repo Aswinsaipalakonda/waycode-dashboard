@@ -19,9 +19,10 @@ export function IntentCanvas({ repoName, running, onRun }: Props) {
             <Sparkles className="h-4 w-4 shrink-0 text-primary" />
             <h2 className="truncate text-sm font-medium">Intent Canvas</h2>
           </div>
-          <span className="shrink-0 truncate rounded-full border border-border bg-surface px-2.5 py-1 text-xs text-muted-foreground">
+          <span className="hidden shrink-0 truncate rounded-full border border-border bg-surface px-2.5 py-1 text-xs text-muted-foreground sm:inline">
             {repoName}
           </span>
+
         </div>
 
         <textarea
